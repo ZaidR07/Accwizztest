@@ -13,7 +13,10 @@ const app = express();
 const PORT = 4000;
 
 
-
+app.use(cors({
+  origin: ['http://localhost:3000','https://test-liart-six-77.vercel.app'],  
+  credentials: true
+}));
 
 
 
