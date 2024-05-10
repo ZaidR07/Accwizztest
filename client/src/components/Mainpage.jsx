@@ -40,7 +40,7 @@ const Mainpage = ({admin}) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const addresponse = await axios.post("http://localhost:4000/Groupadd", {
+            const addresponse = await axios.post("https://accwizztest.onrender.com/Groupadd", {
                 Groupname,
                 Groupcode,
                 Parentgroup,
@@ -62,7 +62,7 @@ const Mainpage = ({admin}) => {
 
     const handleupdate = async () => {
 
-        const updateresponse = await axios.post("http://localhost:4000/update", {
+        const updateresponse = await axios.post("https://accwizztest.onrender.com/update", {
             updateid,
             Groupname,
             Groupcode,
@@ -81,7 +81,7 @@ const Mainpage = ({admin}) => {
 
     const handleLoad = async () => {
         try {
-            const loadresponse = await axios.get("http://localhost:4000/getdata");
+            const loadresponse = await axios.get("https://accwizztest.onrender.com/getdata");
             setResponsegroupdata(loadresponse.data);
         }
         catch (error) {
@@ -102,7 +102,7 @@ const Mainpage = ({admin}) => {
 
     const handledelete = async () => {
         if (dltid) {
-            const dltresponse = await axios.post("http://localhost:4000/dlt", {
+            const dltresponse = await axios.post("https://accwizztest.onrender.com/dlt", {
                 dltid
             });
             if (dltresponse.status) {

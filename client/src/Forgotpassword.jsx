@@ -12,7 +12,7 @@ const Forgotpassword = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/Forgot_password", {
+      const response = await axios.post("https://accwizztest.onrender.com/Forgot_password", {
         username,
 
       });
@@ -29,7 +29,7 @@ const Forgotpassword = () => {
   const handleSubmit1 = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/SetNewpassword", {
+      const response = await axios.post("https://accwizztest.onrender.com/SetNewpassword", {
         username,
         otp,
         newpass,

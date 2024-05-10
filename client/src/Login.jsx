@@ -12,7 +12,7 @@ const Login = ({ setLoggedIn, setAdmin }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/login", {
+      const response = await axios.post("https://accwizztest.onrender.com/login", {
         username: username,
         password: password
       });
